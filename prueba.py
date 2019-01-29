@@ -6,6 +6,8 @@
 #pip3 freeze
 #pip install flask
 #pip3 freeze
+#FLASK_APP=prueba.py flask run
+
 
 from flask import Flask
 app = Flask(__name__)
@@ -34,9 +36,9 @@ def login():
     	numero_usuario = request.args.get('numero_usuario')
 
     	if int(numero_usuario) > rand:
-    		return "el numero es mayor al que tienes que adivinar"
+    		return "el numero introducido es mayor al que tienes que adivinar"
     	elif int(numero_usuario) < rand:
-    		return "el numero es menor al que tienes que adivinar"
+    		return "el numero introducido es menor al que tienes que adivinar"
     	elif int(numero_usuario) == rand:
     		return "adivinaste"
     else:
