@@ -1,0 +1,27 @@
+#instalar pip3 (importante que sea el 3)
+# apt install python3-pip
+
+#instalar virtualenv
+#pip3 install virtualenv
+
+#crea el entorno virtual
+#virtualenv envlFlask
+
+#comprueba librerias:
+#pip3 freeze
+
+#activa la ruta
+#source envFlask/bin/activate
+
+#pip3 freeze
+
+#instala librerias flask:
+#pip install flask
+
+#pip3 freeze
+
+#hacer que funcione el servidor de python
+#FLASK_APP=prueba.py flask run
+
+#para que cuando cambies algo en python, no reinicies la consola:
+#export FLASK_DEBUG=1

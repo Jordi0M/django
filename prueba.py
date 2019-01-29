@@ -1,13 +1,3 @@
-# apt install python3-pip
-#pip3 install virtualenv
-#virtualenv envlFlask
-#pip3 freeze
-#source envFlask/bin/activate
-#pip3 freeze
-#pip install flask
-#pip3 freeze
-#FLASK_APP=prueba.py flask run
-
 
 from flask import Flask
 app = Flask(__name__)
