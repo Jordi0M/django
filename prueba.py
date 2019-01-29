@@ -17,7 +17,7 @@ app = Flask(__name__)
 def hello():
 
     return """
-    <form action="login">
+    <form action="login" method="POST">
     	<p>Introduc un numero del 1 al 10:</p>
     	<input type=text name=numero_usuario>
     	<input type=submit>
@@ -26,14 +26,16 @@ def hello():
     """
 
 import random
-rand = random.randrange(0,11,1) #del 0 al 10 de uno en uno
+rand = random.randrange(1,11,1) #del 1 al 10 de uno en uno
 
 
 from flask import request
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'GET':
-    	numero_usuario = request.args.get('numero_usuario')
+    if request.method == 'POST':
+    	numero_usuario = request.form['numero_usuario']
+    	print(numero_usuario)
+    	
 
     	if int(numero_usuario) > rand:
     		return "el numero introducido es mayor al que tienes que adivinar"
